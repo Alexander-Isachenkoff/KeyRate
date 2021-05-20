@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/screen/window.xsd"
+        caption="msg://newScreen.caption"
+        messagesPack="com.company.keyrate.web.screens.keyrate">
+    <data>
+        <instance id="keyRateDc" class="com.company.keyrate.entity.KeyRate">
+            <view extends="_local"/>
+            <loader id="keyRateDl"/>
+        </instance>
+    </data>
+    <layout>
+        <vbox spacing="true" width="AUTO">
+            <hbox spacing="true">
+                <label align="MIDDLE_LEFT" value="&#1044;&#1072;&#1090;&#1072;" width="48px"/>
+                <textField id="dateField" dataContainer="keyRateDc" datatype="localDate" property="date"
+                           editable="false"/>
+            </hbox>
+            <hbox spacing="true">
+                <label align="MIDDLE_LEFT" value="&#1057;&#1090;&#1072;&#1074;&#1082;&#1072;" width="48px"/>
+                <textField id="rateValueField" dataContainer="keyRateDc" datatype="double" property="rateValue"
+                           editable="false"/>
+            </hbox>
+            <datePicker id="datePicker"/>
+        </vbox>
+    </layout>
+</window>
